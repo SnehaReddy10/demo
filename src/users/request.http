@@ -1,0 +1,41 @@
+### Create a user
+POSt http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+    "email": "ss@test.com",
+    "password": "1234"
+}
+
+### Login a user
+
+POSt http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+    "email": "abc@test.com",
+    "password": "1234"
+}
+
+### Get a user
+GET http://localhost:3000/auth/63aefb24397313e6050950d6
+
+###Get user by email
+GET http://localhost:3000/auth?email=abc@test.com
+
+### Update user
+PUT http://localhost:3000/auth/63aefb24397313e6050950d6
+Content-Type: application/json
+
+{
+    "email": "testst@test.com"
+}
+
+### Delete user
+DELETE http://localhost:3000/auth/63aef3235edd37e3219befa7
+
+### Get Current user
+GET http://localhost:3000/auth/whoami
+
+### Signout a user
+POST http://localhost:3000/auth/signout
